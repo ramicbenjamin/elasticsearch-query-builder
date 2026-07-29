@@ -391,6 +391,18 @@ The following query types are available:
     ->missing(10);
 ```
 
+#### `RangeAggregation`
+
+[https://www.elastic.co/docs/reference/aggregations/search-aggregations-bucket-range-aggregation](https://www.elastic.co/docs/reference/aggregations/search-aggregations-bucket-range-aggregation)
+
+```php
+\Spatie\ElasticsearchQueryBuilder\Aggregations\RangeAggregation::create('price_ranges', 'price', [
+    ['to' => 100.0],
+    ['from' => 100.0, 'to' => 200.0],
+    ['from' => 200.0],
+]);
+```
+
 #### `ReverseNestedAggregation`
 
 [https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-reverse-nested-aggregation.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-reverse-nested-aggregation.html)
